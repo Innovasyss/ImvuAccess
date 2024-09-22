@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImvuAccess - Login</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- login.html -->
+<header>
+    <h1>ImvuAccess</h1>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a> <!-- Added Register Link -->
+        <a href="products.html">Products</a>
+        <a href="history.html">History</a>
+    </nav>
+</header>
+
+
+    <main>
+        <section class="login">
+            <h2>Login</h2>
+            <form id="loginForm">
+                <label for="username">Username: hint: enter imvu username for fast dellivery</label>
+                <input type="text" id="username" required>
+
+                <label for="password">Password:</label>
+                <input type="password" id="password" required>
+
+                <button type="submit" class="btn">Login</button>
+            </form>
+            <p id="loginError" class="error"></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ImvuAccess. All rights reserved.</p>
+    </footer>
+
+    <script src="js/login.js"></script>
+</body>
+</html>

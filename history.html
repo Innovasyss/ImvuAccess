@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ImvuAccess - History</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <h1>ImvuAccess</h1>
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="login.html" id="login-link">Login</a>
+                <a href="register.html" id="register-link">Register</a>
+                <a href="products.html">Products</a>
+                <a href="history.html">History</a>
+            </nav>
+            <div class="user-info" id="user-info" style="display: none;">
+                <span id="user-details"></span>
+                <a href="#" id="logout-link">Logout</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="history">
+            <h2>Purchase History</h2>
+            <table id="historyTable">
+                <thead>
+                    <tr>
+                        <th>Product</th>
+                        <th>Payment Status</th>
+                        <th>Rating</th>
+                        <th>Timestamp</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Purchase history will be dynamically inserted here -->
+                </tbody>
+            </table>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 ImvuAccess. All rights reserved.</p>
+    </footer>
+
+    <script src="js/history.js"></script>
+</body>
+</html>

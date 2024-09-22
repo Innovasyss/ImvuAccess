@@ -48,6 +48,52 @@ function handleBuy(e) {
 function isUserLoggedIn() {
     return localStorage.getItem('currentUser') !== null;
 }
+// Show Terms and Conditions Modal
+function showTermsModal() {
+    const modal = document.getElementById('termsModal');
+    modal.style.display = 'block';
+
+    const closeModal = document.getElementById('closeModal');
+    const agreeBtn = document.getElementById('agreeBtn');
+
+    closeModal.onclick = function() {
+        modal.style.display = 'none';
+    }
+
+    agreeBtn.onclick = function() {
+        modal.style.display = 'none';
+        localStorage.setItem('agreedToTerms', 'true'); // Store the agreement
+    }
+}
+
+// Check if user has already agreed to terms
+function checkTermsAgreement() {
+    const agreed = localStorage.getItem('agreedToTerms');
+    if (!agreed) {
+        showTermsModal();
+    }
+}
+
+// Call this function when the page loads
+document.addEventListener('DOMContentLoaded', () => {
+    checkTermsAgreement();
+});
+
+// Event listener for filter change
+document.getElementById('product-filter').addEventListener('change', function() {
+    const filterValue = this.value;
+    const products = document.querySelectorAll('.product-card');
+
+    products.forEach(product => {
+        const category = product.getAttribute('data-category');
+        if (filterValue === 'all' || category === filterValue) {
+            product.style.display = 'block'; // Show product
+        } else {
+            product.style.display = 'none'; // Hide product
+        }
+    });
+});
+
 
 // Simulate Payment Processing
 function simulatePayment(product) {
